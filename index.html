@@ -1,53 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Taller 1 GitHub Actions</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <h1>Taller 1 - CI/CD con GitHub Actions</h1>
-        <p class="subtitle">
-          Implementación de Integración y Despliegue Continuo
-        </p>
-      </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Pipeline</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">DevOps</div>
+        <div class="nav-links">
+            <a href="#home">Inicio</a>
+            <a href="#process">Proceso</a>
+            <a href="#tools">Herramientas</a>
+        </div>
+    </nav>
 
-      <main>
-        <section class="content-section">
-          <h2>¿Qué es CI/CD?</h2>
-          <p>
-            CI/CD significa Integración Continua y Despliegue Continuo. Es una
-            práctica de desarrollo de software que permite:
-          </p>
-          <ul>
-            <li>Automatizar el proceso de integración de código</li>
-            <li>Realizar pruebas de forma automática</li>
-            <li>Desplegar aplicaciones de manera consistente</li>
-          </ul>
-        </section>
+    <section id="home" class="pipeline-intro">
+        <div class="container">
+            <h1>Pipeline DevOps Automatizado</h1>
+            <div class="pipeline-steps">
+                <div class="step">
+                    <span>1</span>
+                    <h3>Code</h3>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step">
+                    <span>2</span>
+                    <h3>Build</h3>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step">
+                    <span>3</span>
+                    <h3>Test</h3>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step">
+                    <span>4</span>
+                    <h3>Deploy</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section class="content-section">
-          <h2>GitHub Actions</h2>
-          <p>GitHub Actions es una plataforma que nos permite:</p>
-          <ul>
-            <li>Automatizar flujos de trabajo</li>
-            <li>Ejecutar pruebas automáticas</li>
-            <li>Realizar despliegues automáticos</li>
-          </ul>
-        </section>
-      </main>
+    <section id="process" class="info-section">
+        <div class="container">
+            <h2>Proceso CI/CD</h2>
+            <div class="process-grid">
+                <div class="process-item">
+                    <h3>Integración Continua</h3>
+                    <p>Automatización del proceso de integración del código fuente.</p>
+                </div>
+                <div class="process-item">
+                    <h3>Pruebas Automatizadas</h3>
+                    <p>Ejecución automática de pruebas para garantizar la calidad.</p>
+                </div>
+                <div class="process-item">
+                    <h3>Despliegue Continuo</h3>
+                    <p>Automatización del proceso de publicación en producción.</p>
+                </div>
+                <div class="process-item">
+                    <h3>Monitoreo</h3>
+                    <p>Seguimiento continuo del rendimiento y la disponibilidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <footer>
-        <p>
-          Repositorio:
-          <a href="https://github.com/JuanFranQ/Taller1GHA1" target="_blank"
-            >Taller1GHA1</a
-          >
-        </p>
-      </footer>
-    </div>
-  </body>
+    <section id="tools" class="tools-section">
+        <div class="container">
+            <h2>Herramientas Utilizadas</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">🔧</div>
+                    <h3>GitHub Actions</h3>
+                    <p>Automatización del flujo de trabajo</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">🚀</div>
+                    <h3>GitHub Pages</h3>
+                    <p>Despliegue automático</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">🔄</div>
+                    <h3>Git</h3>
+                    <p>Control de versiones</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Desarrollado por Juan Francisco Quevedo - CI/CD Pipeline con GitHub Actions</p>
+    </footer>
+</body>
 </html>
