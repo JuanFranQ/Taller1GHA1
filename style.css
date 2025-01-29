@@ -1,12 +1,11 @@
-/* Variables */
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --background-color: #ecf0f1;
-    --text-color: #333;
+    --primary: #ff4d4d;
+    --secondary: #333;
+    --accent: #00c2ff;
+    --background: #1a1a1a;
+    --text: #ffffff;
 }
 
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -14,76 +13,180 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
     line-height: 1.6;
-    background-color: var(--background-color);
-    color: var(--text-color);
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px;
 }
 
-/* Header */
-header {
+/* Navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* Pipeline Intro */
+.pipeline-intro {
+    padding: 120px 0 60px;
     text-align: center;
-    padding: 40px 0;
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 8px;
-    margin-bottom: 30px;
+    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
 }
 
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+.pipeline-intro h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: var(--primary);
 }
 
-.subtitle {
-    font-size: 1.2em;
-    color: #bdc3c7;
+.pipeline-steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-/* Secciones de contenido */
-.content-section {
-    background: white;
-    padding: 25px;
-    margin-bottom: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.step {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 150px;
+    transition: transform 0.3s;
 }
 
-h2 {
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--secondary-color);
+.step:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
 }
 
-ul {
-    list-style-position: inside;
-    padding-left: 20px;
+.step span {
+    background: var(--primary);
+    color: var(--text);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    font-weight: bold;
 }
 
-li {
-    margin-bottom: 10px;
+.arrow {
+    color: var(--accent);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Info Section */
+.info-section {
+    padding: 80px 0;
+    background: #222;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.process-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary);
+}
+
+.process-item h3 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+/* Tools Section */
+.tools-section {
+    padding: 80px 0;
+    background: #1a1a1a;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.tool-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+}
+
+.tool-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
 /* Footer */
 footer {
+    background: #111;
+    color: var(--text);
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-    border-top: 1px solid #ddd;
+    padding: 2rem;
+    margin-top: 2rem;
 }
 
-footer a {
-    color: var(--secondary-color);
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pipeline-steps {
+        flex-direction: column;
+    }
+    
+    .arrow {
+        transform: rotate(90deg);
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .pipeline-intro h1 {
+        font-size: 2rem;
+    }
 }
